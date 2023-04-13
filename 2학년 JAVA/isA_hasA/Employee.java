@@ -1,4 +1,4 @@
-package ISAHASA;
+package is_a_has_a;
 
 public class Employee {
   private String name;
