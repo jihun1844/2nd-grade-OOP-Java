@@ -1,6 +1,6 @@
 package ObjectClass;
 
-import test.Box;
+
 
 public class CarTest {
   public static void main(String[] args) {
@@ -19,6 +19,5 @@ public class CarTest {
     //에러가 나는 이유는 메소드가 실행될때 car3. 이 찍힐때 애러가 남
     //System.out.println(car1.equals(car3));  // 
 
-    Box box = new Box();
   }
 }

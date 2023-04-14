@@ -1,4 +1,4 @@
-package is_a_has_a;
+package isA_hasA;
 
 public class EmployeeTest {
   public static void main(String[] args) {
