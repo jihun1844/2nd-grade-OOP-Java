@@ -21,6 +21,21 @@ public class SortingUtil {
 
   // SelectionSort (선택 정렬)
   // int형 뿐 아니라 모든 타입에서 값을 정렬 하려면?
+  public static void SelectionSort(interfacetest.Comparable[] values) {
+    for (int i = 0; i < values.length; i++) {
+      int minIdx = i;
+      for (int j = i + 1; j < values.length; j++) {
+        // 현재까지 찾은 최소값(values[minIdx])과
+        // values[j]를 비교해서 values[j]가 더 작으면
+        // minIdx 를 j로 설정
+        if (values[minIdx].compareTo(values[j]) < 0) { // 여기서는 오름차순 > 내림차순 < 으로 바꾸면 됨
+          minIdx = j;
+        }
+      }
+      // minIdx의 값과 i의 값을 교환
+      swap(i, minIdx, values);
+    }
+  }
   public static void SelectionSort(Comparable[] values){
     for(int i = 0; i < values.length; i++){
       int minIdx = i;
@@ -43,11 +58,17 @@ public class SortingUtil {
     values[idx2] = tmp;
    }
 
-   private static void swap(int idx1, int idx2, Comparable[] values){
-    Comparable tmp = values[idx1];
+   private static void swap(int idx1, int idx2, Comparable[] values) {
+     Comparable tmp = values[idx1];
+     values[idx1] = values[idx2];
+     values[idx2] = tmp;
+   }
+   private static void swap(int idx1, int idx2, interfacetest.Comparable[] values) {
+    interfacetest.Comparable tmp = values[idx1];
     values[idx1] = values[idx2];
     values[idx2] = tmp;
-   }
+  }
+   
 
    // insertion sort (삽입 정렬)
    public static void  InsertionSort (int[] values){
