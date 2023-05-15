@@ -4,16 +4,16 @@ public class StringTest {
   public static void main(String[] args) {
     JavaTest0303 s = new JavaTest0303();
     s.setName("wlgns");
-    System.out.println(s.getName());
+    //System.out.println(s.getName());
 
     String s1 = "홍길동";
-    char c = s1.charAt(1);
-    System.out.println(c);
+    char c = s1.charAt(1); //인텍스 1번쨰의 문자를 반환
+    //System.out.println(c);
 
     //String의 값이 같으면 다른 이름으로 변수를 직어도 새로운 객체를 찍지않는다 그래서 true
     String s2 = "홍길동";
     boolean r = s1 == s2;
-    //System.out.println(r);
+    System.out.println(r);
 
     //new String으로 만든것은 주소값이 다르기 때문에 false
     String s3 = new String("홍길동");
