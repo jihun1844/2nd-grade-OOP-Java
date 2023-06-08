@@ -35,6 +35,7 @@ public class test {
     // });
 
     /*
+     오직 하나의 추상메소드만 가지는 인터페이스 타입의객체를 람다식으로 생성 할수 있다
      람다식은 이름없는 메소드라 할수 있다
      람다식은 이용하는 이유는 간단하기 때문이다
      람다식을 이용하는 메소드가 필요한 곳에 간단히 메소드를 보낼수 있다
@@ -65,7 +66,7 @@ public class test {
 
     //람다식을 이용해서 printPerson 메소드를 호출하고
     //그 결과로 나이 20에서 30살 사이의 여자만 출력되도록 구현 하라
-    printPerson(list, (p) -> {return p.getGender() == Sex.FEMALE && p.getAge() >= 20 && p.getAge() <= 30;});
+    printPerson(list, p -> {return p.getGender() == Sex.FEMALE && p.getAge() >= 20 && p.getAge() <= 30;});
   }
   
   //collection framework : List, Set, Map, Stack, Queue
